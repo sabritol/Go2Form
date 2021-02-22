@@ -13,8 +13,6 @@ createStore({});
 function App() {
   return (
     <StateMachineProvider>
-      <h1>Page Form Wizzard</h1>
-
       <Router>
         <Route exact path="/" component={Step1} />
         <Route path="/step2" component={Step2} />
@@ -26,3 +24,5 @@ function App() {
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
+    
+
