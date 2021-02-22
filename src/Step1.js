@@ -14,7 +14,7 @@ const Step1 = (props) => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <h2>Step 1</h2>
+      <h1>A little about you </h1>
       <label>
         First Name:
         <input name="firstName" ref={register} defaultValue={state.firstName} />
