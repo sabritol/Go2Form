@@ -18,18 +18,18 @@ const Step2 = (props) => {
   return (
     // <form onSubmit={handleSubmit(data => setData(data))} className="form">
     <form onSubmit={handleSubmit(onSubmit)}>
-      <label className="control-label" htmlFor="vehicles">How many vehicles do you own?<br />
-        <input type="radio" name="vehicles" id="vehicles-1" value="1"
+      <label className="control-label" htmlFor="role">How many vehicles do you own?<br />
+        <input type="radio" name="role" id="buyer" value="buyer"
           ref={register({ required: true })} className="radio"
-          defaultChecked={state.data === "1"} 
+          defaultChecked={state.data === "buyer"} 
         />
-        <label class="radio">1</label>
+        <label class="radio">buyer</label>
 
-        <input type="radio" name="vehicles" id="vehicles-2" value="2"
+        <input type="radio" name="role" id="seller" value="seller"
           ref={register({ required: true })} className="radio"
-          defaultChecked={state.data === "2"} 
+          defaultChecked={state.data === "seller"} 
         />
-        <label class="radio">2</label>
+        <label class="radio">seller</label>
         {errors && <div className="form_error">Number of Vehicles is required</div>}
       </label>
 
