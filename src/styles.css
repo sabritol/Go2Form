@@ -1,8 +1,6 @@
 body {
   background: #f7f7f7;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 form {
@@ -11,26 +9,73 @@ form {
 }
 
 h1 {
-  font-weight: 100;
+  font-weight: 600;
+  font-size: 36px;
+  letter-spacing: -0.06em;
   color: rgb(7, 7, 7);
   text-align: center;
   padding-bottom: 10px;
   border-bottom: 1px solid rgb(79, 98, 148);
 }
 
-.form {
-  background: #080808;
-  max-width: 400px;
-  margin: 0 auto;
+
+.radio{
+  
+  background: rgba(96, 196, 159, 0.1);
+  border: 1px solid #60C49F;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 166px;
+  height: 56px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 16px;
+  font-family:'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.06em;
+  text-align: center;
+  left: 34px;
+  top: 10px;
+  margin-top: 3px;
+  padding-top: 20px;
+  
+
+
+
 }
 
+
+.field{
+  display: table-cell; 
+
+
+}
+
+
+
+
 p {
-  color: #bf1650;
+  color: #070707;
+  width: 264px;
+  height: 100px;
+  font-size: 16px;
+  left: 0px;
+  top: 31px;
+  letter-spacing: -0.06em;
+  line-height: 19px;
+
+
+
+
 }
 
 p::before {
   display: inline;
-  content: "⚠ ";
+ 
 }
 
 input {
@@ -38,39 +83,53 @@ input {
   box-sizing: border-box;
   width: 100%;
   border-radius: 4px;
-  border: 1px solid rgb(22, 5, 173);
+  border: 1px solid #E0E0E0;
   padding: 10px 15px;
   margin-bottom: 10px;
   font-size: 14px;
+  font-family: 'Work Sans', sans-serif;
+
 }
 
 label {
   line-height: 2;
+  
   text-align: left;
   display: block;
   margin-bottom: 13px;
   margin-top: 20px;
-  color: rgb(180, 39, 39);
+  color: #242424;
   font-size: 14px;
   font-weight: 200;
+  font-family: 'Work Sans', sans-serif;
+
 }
 
 button[type="submit"],
 input[type="submit"] {
   background: #242424;
+  font-family: 'Work Sans', sans-serif;
+
+  border: 1px solid #E0E0E0;
+  letter-spacing: -0.06em;
+  line-height: 19px;
+  font-size: 16px;
   color: rgb(255, 255, 255);
-  text-transform: uppercase;
-  border: none;
+  border: 1px solid #E0E0E0;
   margin-top: 40px;
   padding: 20px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 100;
   letter-spacing: 10px;
+  cursor: pointer;
+  align-items: center;
 }
 
 button[type="submit"]:hover,
 input[type="submit"]:hover {
   background: #242424;
+  font-family: 'Work Sans', sans-serif;
+
 }
 
 button[type="submit"]:active,
@@ -101,16 +160,7 @@ input[type="submit"] {
   margin: 0 auto;
 }
 
-button[type="button"] {
-  display: block;
-  appearance: none;
-  background: #333;
-  color: rgb(16, 28, 133);
-  border: none;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  border-radius: 4px;
-}
+
 
 hr {
   margin-top: 30px;
