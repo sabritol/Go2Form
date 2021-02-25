@@ -19,10 +19,13 @@ const Step1 = (props) => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <h1>A little about you </h1>
+      <table >
       <label>
-        First Name:
+        <p>Please fill some of the basic details to get started.</p>
+        <div className="field">
         <input 
         id="firstName"
+        placeholder= "First Name"
         name="firstName" 
         defaultValue={state.firstName}
         ref={register({
@@ -32,12 +35,14 @@ const Step1 = (props) => {
         {errors.firstName && errors.firstName.type === "required" && (
           <div className="error">This field cannot be empty.</div>
         )}
+        </div>
         
       </label>
       <label>
-        Last Name:
+       
         <input 
         id="lastName"
+        placeholder= "Last Name"
         name="lastName" 
         defaultValue={state.lastName}
         ref={register({
@@ -48,6 +53,7 @@ const Step1 = (props) => {
           <div className="error">This field cannot be empty.</div>
         )}
       </label>
+      </table>
       <input type="submit" />
     </form>
   );

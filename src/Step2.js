@@ -7,7 +7,7 @@ import updateAction from "./updateAction";
 
 const Step2 = (props) => {
   const { register, handleSubmit } = useForm();
-  const { state, actions, errors } = useStateMachine({ updateAction });
+  const { state, actions } = useStateMachine({ updateAction });
   const onSubmit = (data) => {
     actions.updateAction(data);
     props.history.push("./result");
@@ -19,23 +19,38 @@ const Step2 = (props) => {
     
     <form onSubmit={handleSubmit(onSubmit)}>
        <h1>Select your role </h1>
-      <label className="control-label" htmlFor="role">Choose a role that better defines you.<br />
-        <input type="radio" name="role" id="buyer" value="buyer"
-          ref={register({ required: true })} className="radio"
+       <p>Choose a role that better defines you.</p>
+      
+      <div className="radio-wraper">
+       <div className="buyer">
+       <label className="control-label" htmlFor="role">
+         <input className="radio" type="radio" name="role" id="buyer" value="buyer"
+          ref={register({ required: true })} 
           defaultChecked={state.data === "buyer"} 
         />
+       <label className="radio">Buyer</label>
+       </label>
+       </div>
        
-        <label class="radio">buyer</label>
 
-        <input type="radio" name="role" id="seller" value="seller"
-          ref={register({ required: true })} className="radio"
+
+       <div className="seller">
+       <label className="control-label" htmlFor="role">
+        <input className="radio" type="radio" name="role" id="seller" value="seller"
+          ref={register({ required: true })}
           defaultChecked={state.data === "seller"} 
         />
-        <label class="radio">seller</label>
-        {errors && <div className="form_error">Number of Vehicles is required</div>}
+        <label className="radio">Seller</label>
+        {/* {errors && <div className="form_error">Number of Vehicles is required</div>} */}
       </label>
+      </div>
+      </div>
+
+
+
 
       <input type="submit" />
+
 
 
     
