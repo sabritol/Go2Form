@@ -19,6 +19,7 @@ const Step1 = (props) => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <h1>A little about you </h1>
+      <table >
       <label>
         <p>Please fill some of the basic details to get started.</p>
         <div className="field">
@@ -52,6 +53,7 @@ const Step1 = (props) => {
           <div className="error">This field cannot be empty.</div>
         )}
       </label>
+      </table>
       <input type="submit" />
     </form>
   );
