@@ -15,150 +15,126 @@ h1 {
   color: rgb(7, 7, 7);
   text-align: center;
   padding-bottom: 10px;
+  position: relative;
 }
-
-
-
-.left-wrap {
-  display: inline-block;
-  width: 25%; /* change this as you like */
-  box-sizing: border-box;
-}
-
-/* 
-.field{
-  display: table-cell;
-}
-
-.data{
-  display: inline-block;
-} */
-
-
-
 
 p {
   color: #070707;
-  width: 264px;
+  width: auto;
   height: 100px;
   font-size: 16px;
   left: 0px;
   top: 31px;
   letter-spacing: -0.06em;
   line-height: 19px;
-
+  text-align: center;
+  position:relative;
+  display: block;
 
 
 
 }
 
-p::before {
-  display: inline;
- 
-}
 
 input {
-  display: inline-block;
+  display:inline-block;
   box-sizing: border-box;
   width: 100%;
   border-radius: 4px;
   border: 1px solid #E0E0E0;
+  width: unset;
+  width: 166px;
+  height: 56px;
   padding: 10px 15px;
   margin-bottom: 10px;
+  margin-left: 20px;
   font-size: 14px;
   font-family: 'Work Sans', sans-serif;
-
 }
+  
 
 label {
-  /* line-height: 2; */
   width: unset;
-  box-sizing: border-box;
-
-  text-align: right;
-  display:inline-block;
-  /* margin-bottom: 13px; */
-  /* margin-top: 20px; */
-  color: #242424;
+  display:inline;
+  margin-top: 6px;
+  color: #020202;
   font-size: 14px;
   font-weight: 200;
+  margin-left: .9rem;
+  clear: none;
   font-family: 'Work Sans', sans-serif;
 
 
 }
-label.radio {
-  margin: 0 10px 0 10px;
-  /* background: rgba(5, 189, 121, 0.1); */
-  box-sizing: border-box;
-  /* border: 1px solid #60C49F; */
 
-
-
-}
-.radio{
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
   width: unset;
-  /* border: 1px solid #60C49F; */
 }
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    border: 1px solid #E0E0E0;
+    background: rgba(241, 242, 243, 0.1);
+    display:inline-block;
+    left: 25%;
+    position: relative;
+    margin-left: 15%;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 10px;
+    height: 9px;
+    background: #f5f1f4;
+    position: absolute;
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    top: 50%;
+    bottom: 30%;
+    border: 3px solid #60C49F;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
 
 .buyer{
-  border: 1px solid #60C49F;
-  background: rgba(5, 189, 121, 0.1);
-  width: unset;
-  display:inline-block;
-  left: 25%;
+  border: 1px solid #E0E0E0;
+  background: rgba(247, 250, 249, 0.1);
+  width: 166px;
+  height: 56px;
+  display:inline-flex;
+  /* left: 25%; */
   margin-left: 15%;
 
 }
 .seller{
-  border: 1px solid #60C49F;
-  background: rgba(5, 189, 121, 0.1);
-  width: unset;
-  display:inline-block;
-  left: 25%;
-  position: relative;
-  margin-left: 15%;
-
-}
-/* .radio-wraper{
-  width: unset;
-  display:inline-block;
-  background-color: brown;
-
-
-
-} */
-
-
-
-
-
-
-
-
-
-
-  
-  /* background: rgba(96, 196, 159, 0.1);
-  border: 1px solid #60C49F;
-  box-sizing: border-box;
-  border-radius: 4px;
+  border: 1px solid #E0E0E0;
   width: 166px;
   height: 56px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 0px 16px;
-  font-family:'Work Sans', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 18px;
-  letter-spacing: -0.06em;
-  text-align: right;
-  left: 34px;
-  top: 10px;
-  margin-top: 3px;
-  padding-top: 20px; */
+  display:inline-flex;
+  margin-left: 15%;
+  
+}
+
+
+
+
+
+
+
 
 
 button[type="submit"],
@@ -215,9 +191,7 @@ input[type="submit"] {
   max-width: 600px;
   margin: 0 auto;
 }
-.field {
-  display: flex;
-}
+
 
 
 
@@ -230,8 +204,8 @@ h2 {
   font-weight: 200;
 }
 
-button {
-  display: block;
+/* button {
+  display: flex;
   appearance: none;
   margin-top: 40px;
   border: 1px solid #333;
@@ -239,9 +213,9 @@ button {
   text-transform: uppercase;
   padding: 10px 20px;
   border-radius: 4px;
-}
+} */
 
-pre {
-  color: rgb(116, 108, 4);
+/* pre {
+  color: rgb(39, 116, 4);
   white-space: pre;
-}
+} */
