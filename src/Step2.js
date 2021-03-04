@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { withRouter } from "react-router-dom";
 import { useStateMachine } from "little-state-machine";
 import updateAction from "./updateAction";
+// import { RadioGroup, RadioButton, ReversedRadioButton } from 'react-radio-buttons';
+
 
 
 const Step2 = (props) => {
@@ -20,31 +22,31 @@ const Step2 = (props) => {
     <form onSubmit={handleSubmit(onSubmit)}>
        <h1>Select your role </h1>
        <p>Choose a role that better defines you.</p>
-      
-      <div className="radio-wraper">
-       <div className="buyer">
-       <label className="control-label" htmlFor="role">
+
+
+ <div className="radio-wraper">
+       <span className="buyer">
          <input className="radio" type="radio" name="role" id="buyer" value="buyer"
           ref={register({ required: true })} 
           defaultChecked={state.data === "buyer"} 
         />
-       <label className="radio">Buyer</label>
-       </label>
-       </div>
-       
+       <label for="buyer" >Buyer</label>
+       <span className="checkmark"></span>
+       </span>
+        
 
 
-       <div className="seller">
-       <label className="control-label" htmlFor="role">
+       <span className="seller">
         <input className="radio" type="radio" name="role" id="seller" value="seller"
           ref={register({ required: true })}
           defaultChecked={state.data === "seller"} 
         />
-        <label className="radio">Seller</label>
-        {/* {errors && <div className="form_error">Number of Vehicles is required</div>} */}
-      </label>
-      </div>
-      </div>
+        <label for="seller" >Seller</label>
+        <span className="checkmark"></span>
+    
+       </span> 
+   
+       &nbsp;&nbsp;&nbsp;
 
 
 
@@ -53,7 +55,7 @@ const Step2 = (props) => {
 
 
 
-    
+    </div>
     </form>
   );
 };
