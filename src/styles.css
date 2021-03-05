@@ -56,11 +56,11 @@ input {
 label {
   width: unset;
   display:inline;
-  margin-top: 6px;
   color: #020202;
   font-size: 14px;
   font-weight: 200;
-  margin-left: .9rem;
+  margin-left: .0rem;
+  margin-top: .0rem;
   clear: none;
   font-family: 'Work Sans', sans-serif;
 
@@ -71,13 +71,23 @@ label {
 [type="radio"]:not(:checked) {
   width: unset;
 }
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+}
 [type="radio"]:checked + label:before,
 [type="radio"]:not(:checked) + label:before {
     content: '';
     border: 1px solid #E0E0E0;
-    background: rgba(241, 242, 243, 0.1);
+    background: rgba(57, 192, 17, 0.1);
     display:inline-block;
-    left: 25%;
+    left: 0;
+    top:0;
     position: relative;
     margin-left: 15%;
 }
@@ -108,6 +118,10 @@ label {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
+.first{
+align-items: center;
+margin-left: 7%;
+}
 
 
 .buyer{
@@ -118,6 +132,8 @@ label {
   display:inline-flex;
   /* left: 25%; */
   margin-left: 15%;
+  /* align-items: center; */
+
 
 }
 .seller{
@@ -125,7 +141,9 @@ label {
   width: 166px;
   height: 56px;
   display:inline-flex;
-  margin-left: 15%;
+  margin-left: 3%;
+  /* align-items: center; */
+
   
 }
 
@@ -150,15 +168,18 @@ input[type="submit"] {
   margin-top: 40px;
   padding: 20px;
   font-size: 18px;
-  font-weight: 100;
-  letter-spacing: 10px;
+  font-weight: 700;
+  letter-spacing: -0.06em;
   cursor: pointer;
   align-items: center;
+  width: 348px;
+  height: 56px;
+  margin-left: 71px;
 }
 
 button[type="submit"]:hover,
 input[type="submit"]:hover {
-  background: #242424;
+  background: #353333;
   font-family: 'Work Sans', sans-serif;
 
 }
@@ -201,6 +222,7 @@ hr {
 h2 {
   color: rgb(8, 8, 8);
   font-weight: 200;
+  
 }
 
 /* button {

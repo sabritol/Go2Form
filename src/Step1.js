@@ -21,9 +21,11 @@ const Step1 = (props) => {
       <h1>A little about you </h1>
       <p>Please fill some of the basic details to get started.</p>
 
-      <table >
+     
+      <span className="first">
       <label>
-        <div>
+        {/* <div> */}
+       
         <input className="first"
         id="firstName"
         placeholder= "First Name"
@@ -36,11 +38,13 @@ const Step1 = (props) => {
         {errors.firstName && errors.firstName.type === "required" && (
           <div className="error">This field cannot be empty.</div>
         )}
-        </div>
+        {/* </div> */}
         
       </label>
+         </span>
+      <span className="last">
       <label>
-      <div className="field">
+      
        
         <input 
         id="lastName"
@@ -54,9 +58,10 @@ const Step1 = (props) => {
          {errors.lastName && errors.lastName.type === "required" && (
           <div className="error">This field cannot be empty.</div>
         )}
-        </div>
+      
       </label>
-      </table>
+      </span>
+     
       <input type="submit" />
     </form>
   );
