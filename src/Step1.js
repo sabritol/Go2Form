@@ -19,11 +19,14 @@ const Step1 = (props) => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <h1>A little about you </h1>
-      <table >
+      <p>Please fill some of the basic details to get started.</p>
+
+     
+      <span className="first">
       <label>
-        <p>Please fill some of the basic details to get started.</p>
-        <div className="field">
-        <input 
+        {/* <div> */}
+       
+        <input className="first"
         id="firstName"
         placeholder= "First Name"
         name="firstName" 
@@ -35,10 +38,13 @@ const Step1 = (props) => {
         {errors.firstName && errors.firstName.type === "required" && (
           <div className="error">This field cannot be empty.</div>
         )}
-        </div>
+        {/* </div> */}
         
       </label>
+         </span>
+      <span className="last">
       <label>
+      
        
         <input 
         id="lastName"
@@ -52,8 +58,10 @@ const Step1 = (props) => {
          {errors.lastName && errors.lastName.type === "required" && (
           <div className="error">This field cannot be empty.</div>
         )}
+      
       </label>
-      </table>
+      </span>
+     
       <input type="submit" />
     </form>
   );
