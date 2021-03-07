@@ -16,6 +16,8 @@ h1 {
   text-align: center;
   padding-bottom: 10px;
   position: relative;
+  text-align: center;
+
 }
 
 p {
@@ -113,8 +115,13 @@ label {
   -webkit-transform: scale(0);
   transform: scale(0);
 }
-[type="radio"]:checked + label:after {
+[type="radio"]:checked + .buyer:after {
   opacity: 1;
+  border: 1px solid #207e03;
+  width: 166px;
+  height: 56px;
+  display:inline-flex;
+  margin-left: 3%;
   -webkit-transform: scale(1);
   transform: scale(1);
 }
@@ -131,7 +138,7 @@ margin-left: 7%;
   height: 56px;
   display:inline-flex;
   /* left: 25%; */
-  margin-left: 15%;
+  margin-left: 69px;
   /* align-items: center; */
 
 
@@ -145,6 +152,22 @@ margin-left: 7%;
   /* align-items: center; */
 
   
+}
+
+.seller:hover, .seller:focus, .buyer:hover, .buyer:focus {
+  border: 5px solid #54c79d;
+  /* transition: 0.3s all; */
+  /* transform: translateY(0,3px); */
+  border: 1px solid transparent;
+  background-color: rgba(96, 196, 159, 0.1);
+  /* position: sticky; */
+  /* width:0vmax; */
+  /* -webkit-appearance: none; */
+
+ 
+  /* display:inline-flex; */
+
+
 }
 
 
