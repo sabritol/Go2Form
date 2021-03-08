@@ -30,7 +30,7 @@ const Step2 = (props) => {
           ref={register({ required: true })} 
           defaultChecked={state.data === "buyer"} 
         />
-       <label for="buyer" >Buyer</label>
+       <label  >Buyer</label>
        <span className="checkmark"></span>
        </span>
         
@@ -41,7 +41,7 @@ const Step2 = (props) => {
           ref={register({ required: true })}
           defaultChecked={state.data === "seller"} 
         />
-        <label for="seller" >Seller</label>
+        <label  >Seller</label>
         <span className="checkmark"></span>
     
        </span> 

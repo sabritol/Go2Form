@@ -159,6 +159,10 @@ margin-left: 7%;
   background-color: rgba(96, 196, 159, 0.1);
   -webkit-appearance: none;
 }
+.phone-number{
+  display: block;
+  margin-left: 10px;
+}
 
 button[type="submit"],
 input[type="submit"] {

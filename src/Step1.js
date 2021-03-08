@@ -1,20 +1,21 @@
 import React from "react";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { withRouter } from "react-router-dom";
 import { useStateMachine } from "little-state-machine";
 import updateAction from "./updateAction";
+import PhoneInput from "react-phone-input-2";
+import 'react-phone-input-2/lib/style.css'
+
+
 
 const Step1 = (props) => {
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit, errors, control } = useForm();
   const { actions, state } = useStateMachine({ updateAction });
+  // const [value, setValue] = useState()
   const onSubmit = (data) => {
     actions.updateAction(data);
     props.history.push("./step2");
   };
-  // useEffect(() => {
-  //   register({ name: "firstName" }, { required: true });
-  //   register({ name: "lastName" });
-  // }, []);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -24,7 +25,6 @@ const Step1 = (props) => {
      
       <span className="first">
       <label>
-        {/* <div> */}
        
         <input className="first"
         id="firstName"
@@ -38,14 +38,12 @@ const Step1 = (props) => {
         {errors.firstName && errors.firstName.type === "required" && (
           <div className="error">This field cannot be empty.</div>
         )}
-        {/* </div> */}
         
       </label>
          </span>
+
       <span className="last">
       <label>
-      
-       
         <input 
         id="lastName"
         placeholder= "Last Name"
@@ -61,6 +59,36 @@ const Step1 = (props) => {
       
       </label>
       </span>
+      <div>
+         <Controller
+          name="phone"
+          control={control}
+          defaultValue={state.phone}
+          render={({ name, onBlur, onChange, value }) => (
+         <PhoneInput
+          style={{  width: "100%"}}
+            className= "phone-number"
+            required
+            placeholder="Enter phone number"
+            id="phone"
+            name={name} 
+            value={value}
+            onChange= {onChange} 
+            onBlur={onBlur}
+            ref={register}
+            onlyCountries={['us', 'gb', 'de'  ]}
+            defaultCountry={["us"]}
+            localization={{
+              'United States' : 'United States',
+              'United Kingdom': 'United Kingdom',
+              'Germany': 'Deutschland' 
+              }}
+            />
+            )}
+            />
+        </div>
+
+
      
       <input type="submit" />
     </form>
