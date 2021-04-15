@@ -121,13 +121,13 @@ label {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-.first{
+@media only screen and (max-width: 600px) {.first{
 align-items: center;
 margin-left: 7%;
 }
+}
 
-
-.buyer{
+@media only screen and (max-width: 600px) {.buyer {
   border: 1px solid #E0E0E0;
   background: rgba(247, 250, 249, 0.1);
   width: 166px;
@@ -137,8 +137,9 @@ margin-left: 7%;
   margin-left: 69px;
   /* align-items: center; */
 
-
 }
+}
+@media only screen and (max-width: 600px) {
 .seller{
   border: 1px solid #E0E0E0;
   width: 166px;
@@ -147,7 +148,8 @@ margin-left: 7%;
   margin-left: 3%;
   /* align-items: center; */
 
-  
+      
+  }
 }
 
 .seller:hover, .seller:focus, 
